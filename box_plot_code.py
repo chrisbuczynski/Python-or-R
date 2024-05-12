@@ -1,4 +1,4 @@
-# Program created by me for high school students to enable them to check answers to tasks related to box plots as part of a statistics course.
+# Program created by me for my high school students as a tool for checking answers to tasks related to box plots as part of the statistics course.
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -48,11 +48,6 @@ def main():
     print("Median:", Q2)
 
     # Creating x-axis values
-                                                                
-                                                                    # Taki był kod z chatu
-                                                                    # max_x = max_val + 3
-                                                                    #x_values = [min_val - 3] + data 
-                                                                    
     x_values = [min_val - 3] + data + [max_val + 3]
     
     # Drawing a horizontal box plot
@@ -61,14 +56,14 @@ def main():
     plt.title('Horizontal Box Plot of Data')
     plt.xlabel('Values')
     plt.ylabel('')  # Hide the Y axis label
-    plt.xticks([int(x) for x in np.arange(min_val - 3, max_val + 3)])    #  plt.xticks([int(x) for x in np.arange(min_val - 3, max_x + 1)])                                                            
+    plt.xticks([int(x) for x in np.arange(min_val - 3, max_val + 3)])                                                          
     plt.yticks([])  # Hide Y axis ticks
     
     # Adding information about mean
     plt.axvline(x=mean_val, color='red', linestyle='--', label='Mean')
     
     # Setting x-axis limits
-    plt.xlim(min_val - 3,  max_val + 3)            ## plt.xlim(min_val - 3, max_x)
+    plt.xlim(min_val - 3,  max_val + 3)
     
     # Adding box plot elements
     for element in ['boxes', 'whiskers', 'fliers', 'caps']:
@@ -81,22 +76,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-
 # Krzysztof Buczyński
-
-
-
-Powered by 
-Podaj wszystkie liczby do analizy, oddzielone spacją, przecinkiem lub średnikiem:  52, 57, 57, 58, 63, 66, 66, 67, 67, 68, 69, 70, 70, 70, 70, 72, 73, 75, 75, 76, 76, 78, 79, 89
- 
-Liczba danych: 24
-Min: 52.0
-Q1 (25th percentile): 66.0
-Q2 (median, 50th percentile): 70.0
-Q3 (75th percentile): 75.0
-Max: 89.0
-Outliers: [52.0, 89.0]
-Średnia arytmetyczna: 69.29166666666667
-Moda: 70.0
-Mediana: 70.0
-https://python-code-aws.trinket.io/python-generated/cejji4wi/trinket_plot.png
